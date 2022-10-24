@@ -6,7 +6,7 @@
 /*   By: ccottin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 09:17:18 by ccottin           #+#    #+#             */
-/*   Updated: 2022/10/23 13:14:08 by ccottin          ###   ########.fr       */
+/*   Updated: 2022/10/24 09:41:18 by ccottin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main(void)
 		-9874,
 		245
 		};
-	iter(tab, 6, ft_print); 
+	iter(tab, 6, ft_print);
 
 	std::string	tab2[] = {
 		"Coucou",
@@ -53,4 +53,5 @@ int	main(void)
 
 	char tab6[] = { };
 	iter(tab6, 0, ft_print);
+
 }

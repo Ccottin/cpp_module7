@@ -10,8 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <exception>
-#include "Array.hpp"
+#ifndef ARRAY_TPP
+# define ARRAY_TPP
+
+# include <exception>
+# include "Array.hpp"
 
 template< typename T >
 Array<T>::Array(void) : _size(0)
@@ -51,7 +54,8 @@ Array<T>	&Array<T>::operator=(Array const &ref)
 	this->_size = size;
 	if (this != &ref && size > 0)
 	{
-		delete [] (this->_array);
+		if (this->_array)
+			delete [] (this->_array);
 		this->_array = new T[size];
 		for (unsigned int i = 0; i < size; i++)
 			this->_array[i] = ref._array[i];
@@ -65,7 +69,7 @@ template< typename T >
 Array<T>::~Array(void)
 {
 	std::cout << "Destructor Called" << std::endl;
-	if (size() > 0)
+	if (size() > 0 && this->_array)
 		delete [] _array;
 }
 
@@ -83,3 +87,5 @@ unsigned int const 	&Array<T>::size(void) const
 {
 	return (_size);
 }
+
+#endif
