@@ -13,9 +13,6 @@
 #ifndef ARRAY_TPP
 # define ARRAY_TPP
 
-# include <exception>
-# include "Array.hpp"
-
 template< typename T >
 Array<T>::Array(void) : _size(0)
 {
