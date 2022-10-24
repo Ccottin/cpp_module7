@@ -61,7 +61,11 @@ Array<T>	&Array<T>::operator=(Array const &ref)
 			this->_array[i] = ref._array[i];
 	}
 	else if (this != &ref && size == 0)
+	{	
+		if (this->_array)
+			delete [] (this->_array);
 		this->_array = NULL;
+	}
 	return (*this);
 }
 
