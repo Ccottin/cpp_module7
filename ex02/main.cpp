@@ -100,6 +100,12 @@ int	main(void)
 	{
 		std::cout << e.what() << std::endl;	
 	}
+
+    Array   <std::string>arrayempty;
+    array2 = arrayempty;
+    Array   <std::string>arrayempty2;
+    arrayempty = arrayempty2;
+
 	std::cout << "fin tests" << std::endl;
 }
 
